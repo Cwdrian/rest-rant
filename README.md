@@ -16,3 +16,16 @@
 | DELETE | `/places/:id`              | Delete a place                                                                 |
 | POST   | `/places/:id/rant`         | Add rant to a place                                                            |
 | DELETE | `/places/:id/rant/:rantId` | Delete a rant                                                                  |
+
+## Database
+
+**places**
+
+| Field    | Type      |
+| -------- | --------- |
+| \_id     | Object ID |
+| name     | String    |
+| city     | String    |
+| state    | String    |
+| cuisines | String    |
+| pic      | String    |
