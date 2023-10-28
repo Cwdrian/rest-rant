@@ -1,5 +1,6 @@
 const router = require('express').Router()
 
+
 router.get('/', (req, res) => {
     let places = [{
         name: 'H-Thai-ML',
@@ -22,8 +23,9 @@ router.post('/', (req, res) => {
 })
 
 router.get('/new', (req, res) => {
-    res.send('GET /places/new stub')
-})
+    res.render('places/new')
+  })
+  
 
 router.get('/:id', (req, res) => {
     res.send('GET /places/:id stub')
