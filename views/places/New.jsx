@@ -29,8 +29,6 @@ function newForm () {
   </div>
   <input className="btn btn-primary" type="submit" value="Add Place" />
 </form>
-
-
           </main>
         </Def>
     )

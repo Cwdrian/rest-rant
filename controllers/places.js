@@ -23,41 +23,57 @@ router.get('/new', (req, res) => {
     res.render('places/new')
 })
 
-router.delete('/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     let id = Number(req.params.id)
     if (isNaN(id)) {
-      res.render('error404')
+        res.render('error404')
     }
     else if (!places[id]) {
-      res.render('error404')
+        res.render('error404')
     }
     else {
-      places.splice(id, 1)  
-      res.redirect('/places')
+        res.render('places/show', { place: places[id], id })
     }
-  })
-  
-  
-  
+})
 
 router.put('/:id', (req, res) => {
     res.send('PUT /places/:id')
 })
 
 router.delete('/:id', (req, res) => {
-    res.send('DELETE /places/:id')
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else {
+        places.splice(id, 1)
+        res.redirect('/places')
+    }
 })
 
+
 router.get('/:id/edit', (req, res) => {
-    res.send('GET /places/:id/edit')
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else {
+        res.render('places/edit', { place: places[id], id })
+    }
 })
 
 router.post('/:id/rant', (req, res) => {
-    res.send('GET /places/:id/rant')
+    res.send('GET /places/:id/rant stub')
 })
 
 router.delete('/:id/rant/:rantId', (req, res) => {
-    res.send('GET /places/:id/rant/:rantId')
+    res.send('GET /places/:id/rant/:rantId stub')
 })
 
 
