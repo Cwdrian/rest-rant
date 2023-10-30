@@ -1,5 +1,5 @@
 const React = require('react')
-const Def = require('./default')
+const Def = require('./Default')
 
 function home() {
     return (
@@ -22,4 +22,3 @@ function home() {
 }
 
 module.exports = home
-
