@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     if (!req.body.pic) {
-        req.body.pic = '/images/Error404.jpg'
+        req.body.pic = 'public/images/dynamic-wang-cD-_fbY6yww-unsplash.jpg'
     }
     if (!req.body.city) {
         req.body.city = 'Anytown'
@@ -35,6 +35,7 @@ router.get('/:id', (req, res) => {
         res.render('places/show', { place: places[id] })
     }
   })
+  
 
 router.put('/:id', (req, res) => {
     res.send('PUT /places/:id')
