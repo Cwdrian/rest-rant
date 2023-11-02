@@ -1,20 +1,13 @@
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true, 
-  useUnifiedTopology: true
+const placeSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  pic: String,
+  cuisines: { type: String, required: true },
+  city: { type: String, default: 'Anytown' },
+  state: { type: String, default: 'USA' },
+  founded: Number
 })
 
-module.exports = [{
-    name: 'Mandolin',
-    city: 'Raleigh',
-    state: 'NC',
-    cuisines: 'French/ Southern American',
-    pic: '/images/mandolin.jpg'
-}, {
-    name: 'Death and Taxes',
-    city: 'Raleigh',
-    state: 'NC',
-    cuisines: 'Contemporary',
-    pic: '/images/deathtaxes.jpg'
-}]
+module.exports = mongoose.model('Place', placeSchema)
+
