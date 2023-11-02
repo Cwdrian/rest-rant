@@ -13,7 +13,10 @@ function index(data) {
                 <p className="text-center">
                     {place.cuisines}
                 </p>
-                <img src={place.pic} alt={place.name} />
+                <img   style={{ width: 300, height: 200 }} src={place.pic} alt={place.name} />
+                <div>
+                        Photo from <a href="https://unsplash.com/">Unsplash</a>
+                    </div>
                 <p className="text-center">
                     Located in {place.city}, {place.state}
                 </p>
@@ -24,14 +27,11 @@ function index(data) {
     return (
         <Def>
             <main>
-                <h1>PLACES INDEX PAGE</h1>
+                <h1>Places</h1>
                 {placesFormatted}
             </main>
         </Def>
     )
 }
-
-
-
 
 module.exports = index

@@ -7,7 +7,7 @@ function show(data) {
             <main>
                 <div className="row">
                     <div className="col-sm-6">
-                        <img style={{ width: 500, height: 600 }} className="BBQpic" src={data.place.pic} alt={data.place.name} />
+                        <img style={{ width: 460, height: 500 }} className="pic" src={data.place.pic} alt={data.place.name} />
                     </div>
                     <div className="col-sm-6">
                         <h1>{data.place.name}</h1>

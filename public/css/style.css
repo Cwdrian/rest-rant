@@ -36,3 +36,10 @@ main {
   margin-left: 20px;
   background-color: white;
 }
+
+.fourofourpic {
+  background-image: url("/images/error404.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
