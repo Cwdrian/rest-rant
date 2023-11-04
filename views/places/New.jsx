@@ -1,11 +1,18 @@
 const React = require('react')
 const Def = require('../Default')
 
-function newForm () {
+function newForm (data) {
+  let message = ''
+    if (data.message){
+      message = (
+        <h4 className="alert-danger">{data.message} </h4>
+      )
+    }
     return (
         <Def>
           <main>
             <h1>Add a New Place</h1>
+            {message}
             <form method="POST" action="/places">
   <div className="form-group">
     <label htmlFor="name">Place Name</label>
@@ -31,7 +38,12 @@ function newForm () {
 </form>
 <div className="form-group">
   <label for="founded">Founded Year</label>
-  <input className="form-control" id="founded" name="founded" />
+  <input 
+  className="form-control" 
+  id="founded" 
+  name="founded" 
+  value={new Date () .getFullYear()}
+  />
 </div>
 
           </main>
