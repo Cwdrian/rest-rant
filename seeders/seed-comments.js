@@ -17,7 +17,7 @@ async function seed() {
     place.comments.push(comment.id)
 
     //save the place now that it has comment
-    await place.save()
+    //await place.save()
     
     // Exit the program
     process.exit()
