@@ -48,5 +48,3 @@ function newForm(data) {
 }
 
 module.exports = newForm
-
-

@@ -99,7 +99,7 @@ function show(data) {
                             <input id="author" name="author" className="form-control" />
                         </div>
                         <div className="form-group col-sm-4">
-                        <label for="customRange3" class="form-label">Stars</label>
+                            <label for="customRange3" class="form-label">Stars</label>
                                 <input type="range" class="form-range" min="0" max="5" step="0.5" id="stars" name="stars" />
                         </div>
                         <div className="form-group col-sm-3">
